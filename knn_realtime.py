@@ -29,11 +29,21 @@ class RealTimeClassifier:
             image = cv.cvtColor(image, cv.COLOR_RGB2BGR)
             if results.multi_hand_landmarks:
                 for hand_landmarks in results.multi_hand_landmarks:
-                    landmarks_row = []
+                    landmarks = []
                     for lm in hand_landmarks.landmark:
-                        landmarks_row.extend([lm.x, lm.y, lm.z])
-                    prediction = self.model.predict([landmarks_row])
-                    cv.putText(image, f'Prediction: {prediction[0]}', (10, 30), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv.LINE_AA)
+                        landmarks.append([lm.x, lm.y, lm.z])
+                    
+                    # Calcular distâncias relativas entre todos os pares de landmarks
+                    relative_distances = []
+                    for i in range(len(landmarks)):
+                        for j in range(i + 1, len(landmarks)):
+                            distance = np.linalg.norm(np.array(landmarks[i]) - np.array(landmarks[j]))
+                            relative_distances.append(distance)
+                    
+                    # Verificar se a quantidade de dados de entrada é compatível com a do modelo
+                    if len(relative_distances) == len(self.model.X_train[0]):
+                        prediction = self.model.predict([relative_distances])
+                        cv.putText(image, f'Prediction: {prediction[0]}', (10, 30), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv.LINE_AA)
                     mp_drawing.draw_landmarks(
                         image,
                         hand_landmarks,
@@ -41,13 +51,11 @@ class RealTimeClassifier:
                         mp_drawing_styles.get_default_hand_landmarks_style(),
                         mp_drawing_styles.get_default_hand_connections_style())
             cv.imshow('MediaPipe Hands', image)
-            if cv.waitKey(1) & 0xFF == ord('q'):
+            if cv.waitKey(1) & 0xFF == ord('0'):
                 break
 
         vid.release()
         cv.destroyAllWindows()
-
-
 
 # Iniciar a classificação em tempo real
 real_time_classifier = RealTimeClassifier(knn_model)

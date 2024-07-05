@@ -18,8 +18,8 @@ class DataCollector:
     def captureCamera(self):
         vid = cv.VideoCapture(0)
         while True:
-            current_letter = input("Enter the letter to capture data for (or '0' to quit): ")
-            if current_letter.lower() == '0':
+            current_letter = input("Enter the letter to capture data for (or '0' to quit): ").upper()
+            if current_letter == '0':
                 break
 
             elapsed_time = 0
@@ -60,7 +60,7 @@ class DataCollector:
                             mp_drawing_styles.get_default_hand_connections_style())
 
                 cv.imshow('MediaPipe Hands', image)
-                if cv.waitKey(1) & 0xFF == ord('q'):
+                if cv.waitKey(1) & 0xFF == ord('0'):
                     break
 
                 elapsed_time = time.time() - t0
