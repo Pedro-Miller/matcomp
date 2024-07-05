@@ -3,9 +3,9 @@ import cv2 as cv
 import mediapipe as mp
 import numpy as np
 
-tol = 0.80
+tol = 0.88
 
-from knn_train_confidence import KNNClassifier  # Ajuste conforme o nome do arquivo
+from knn_train_confidence import KNNClassifier 
 
 # Carregar o modelo treinado
 knn_model = joblib.load('knn_model_confidence.pkl')
