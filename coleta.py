@@ -26,7 +26,7 @@ class DataCollector:
             t0 = time.time()
             print(f"Capturing data for letter: {current_letter}")
 
-            while elapsed_time < 25:
+            while elapsed_time < 8:
                 success, image = vid.read()
                 if not success:
                     print("Failed to capture image")

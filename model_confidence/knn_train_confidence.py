@@ -46,7 +46,7 @@ y = data['letter'].values
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Inicializa e treina o modelo KNN
-knn = KNNClassifier(k=125)
+knn = KNNClassifier(k=150)
 knn.fit(X_train, y_train)
 
 # Faz previsões no conjunto de teste

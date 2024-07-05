@@ -3,7 +3,7 @@ import cv2 as cv
 import mediapipe as mp
 import numpy as np
 
-tol = 0.95
+tol = 0.80
 
 from knn_train_confidence import KNNClassifier  # Ajuste conforme o nome do arquivo
 
