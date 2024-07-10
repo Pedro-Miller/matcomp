@@ -8,8 +8,8 @@
 
 # Índice
    1. [Pré-Requisitos](#Pré-Requisitos)
-   2. [Como-Funciona?](#como-funciona?)
-   3. [Como-Utilizar?](#Como-utilizar?)
+   2. [Como-Funciona?](#como-funciona)
+   3. [Como-Utilizar?](#como-utilizar)
    
 # Pré-Requisitos
 <p>Foram necessários o uso ou desenvolvimento de algumas ferramentas para cada etapa desse processo, sendo esses: <br>
