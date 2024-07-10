@@ -8,7 +8,7 @@
 
 # Índice
    1. [Pré-Requisitos](#Pré-Requisitos)
-   2. [Como-Funciona?](#Como-Funciona?)
+   2. [Como-Funciona?](#como-funciona?)
    3. [Como-Utilizar?](#Como-utilizar?)
    
 # Pré-Requisitos
