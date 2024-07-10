@@ -8,7 +8,7 @@
 
 # Índice
    1. [Pré-Requisitos](#Pré-Requisitos)
-   2. [Como Funciona?](#Como%20Funciona?)
+   2. [Como Funciona?](#Como-Funciona?)
    3. [Como Utilizar?](#Como-utilizar?)
    
 # Pré-Requisitos
@@ -31,7 +31,7 @@ Primeiramente instale o Python3 do site oficial:
     pip install opencv-python mediapipe scikit-learn pandas matplotlib
 <br>
 
-# Como Funciona?
+# Como-Funciona?
 O KNN (K-Nearest Neighbors) é um algoritmo de aprendizado de máquina supervisionado usado para classificação e regressão. Nesse caso utilizamos esse algoritmo para realizar uma predição baseada em um conjunto de dados.
 Funcionamento do KNN
 Definição do Parâmetro K: O primeiro passo no uso do KNN é escolher o valor de K, que representa o número de vizinhos mais próximos a serem considerados no processo de classificação. O valor de K influencia diretamente o desempenho do modelo. Um K muito pequeno pode tornar o modelo sensível ao ruído dos dados, enquanto um K muito grande pode suavizar demais as fronteiras entre as classes.
