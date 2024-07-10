@@ -6,12 +6,13 @@
 <h1 align='center' >Introdução</h1>
 <p>Esse repositório contém o Classificador KNN capaz de identificar Letras em LIBRAS através de visão computacional e regressão em tempo real. Neste trabalho da disciplina de Matemática Computacional, optamos pela abordagem de desenvolvimento dos conceitos de modelos de classificação e algoritmos de busca iterativa. A ideia inicial consiste no desenvolvimento de um script capaz de ler em tempo real através de uma câmera o formato e posição das mãos de uma pessoa e associá-los em tempo real a um caractere do alfabeto em LIBRAS, podendo servir como um interpretador de linguagem de sinais para texto. </p>
 
-<h1 align='center' >Índice</h1>
-<a align='center' href="#pre-requisitos"><h3>1 - Pré-Requisitos</h3></a>
-<a align='center' href="#como-funciona"><h3>2 - Como Funciona</h3></a>
-<a align='center' href="#como-utilizar"><h3>1 - Como Utilizar</h3></a>
+# Índice
+   1. [Pré-Requisitos](#Pré-Requisitos)
+   2. [Installation](#installation)
+   3. [Usage](#usage)
+   4. [Troubleshooting](#troubleshooting)
    
-<h2 align='center' id="pre-requisitos">Pré-Requisitos</h2>
+# Pré-Requisitos
 <p>Foram necessários o uso ou desenvolvimento de algumas ferramentas para cada etapa desse processo, sendo esses: <br>
 <b><em>Python3</em></b> , para fundamentar o script <br>
 <b><em>OpenCV</em></b>, a biblioteca com modelos para leitura e reconhecimento de imagem <br>
